@@ -55,8 +55,7 @@ class MyRobot(wpilib.IterativeRobot):
         '''This function is run once each time the robot enters autonomous mode.'''
         self.timer.reset()
         self.timer.start()
-
-<<<<<<< HEAD
+        
         def rightturnDrive():
             self.drive.tankDrive(0, 0.5)
 
@@ -87,7 +86,7 @@ class MyRobot(wpilib.IterativeRobot):
             """self.rightpointDrive"""
         elif self.timer.get() <= 11:
             forwardDrive()
-=======
+
 
     def autonomousPeriodic(self):
         '''This function is called periodically during autonomous.'''
@@ -100,7 +99,7 @@ class MyRobot(wpilib.IterativeRobot):
             self.drive.tankDrive(0.55, 0.5)
         else:
             self.drive.tankDrive(0, 0)
->>>>>>> 11c0379c2b6a78ab2b51a49ff1bace2f5010eade
+
 
         gameData = DriverStation.getInstance().getGameSpecificMessage() #Gets color of switches and scale in string form
         position = 3    # Change position based on need
@@ -175,7 +174,7 @@ class MyRobot(wpilib.IterativeRobot):
 
     def teleopPeriodic(self):
         '''Runs the motors with tank steering'''
-<<<<<<< HEAD
+
         left_stick = self.stick.getRawAxis(1) / 1.5
         right_stick = self.stick.getRawAxis(5) / 1.5
         '''if right_stick < 0:
@@ -184,7 +183,7 @@ class MyRobot(wpilib.IterativeRobot):
             divisor = 2.3'''
 
         # adjusted_right_stick = right_stick/divisor
-=======
+
         left_stick = self.stick.getRawAxis(1)/2   # Slows down motors
         right_stick = self.stick.getRawAxis(5)/2
 
@@ -195,7 +194,7 @@ class MyRobot(wpilib.IterativeRobot):
             divisor = 2
         else:
             divisor = 2.1
->>>>>>> 11c0379c2b6a78ab2b51a49ff1bace2f5010eade
+
 
         adjusted_right_stick = right_stick/divisor
         '''
