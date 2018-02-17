@@ -45,6 +45,9 @@ class MyRobot(wpilib.IterativeRobot):
 
         # initialization of the ultrasonic sensor
         self.AnalogInput = wpilib.AnalogInput(2)
+        
+        # initialization of encoder expiriment
+        self.drive_encoder_count = wpilib.encoder.Encoder.getDirection()
 
 
     def autonomousInit(self):
