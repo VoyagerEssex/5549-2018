@@ -7,6 +7,7 @@
 import wpilib
 from wpilib.drive import DifferentialDrive
 from wpilib import DriverStation
+from wpilib import Encoder
 
 class MyRobot(wpilib.IterativeRobot):
 
